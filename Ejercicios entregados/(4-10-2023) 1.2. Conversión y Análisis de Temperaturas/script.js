@@ -71,6 +71,10 @@ if (mitjanaAny2020 > 30){
     superatAny2020 = false
 }
 
+console.log(superatAny2010);
+console.log(superatAny2015);
+console.log(superatAny2020);
+
 
 // Mostraremos en pantalla las temperaturas medias de cada año en ºC, ºF y K; así como un mensaje indicando si la temperatura media es > 30ºC
 
