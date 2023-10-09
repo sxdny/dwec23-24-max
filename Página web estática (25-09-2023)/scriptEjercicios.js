@@ -43,6 +43,7 @@ let impuestoPorCiudadano =
 
 //Establecemos el nombre del alumno, la nota del primer examen, del segundo examen, del projecto y de la nota final
 
+/*
 let nombreAlumno = "Uzi";
 let notaExamen1 =  7;
 let notaExamen2 = 9;
@@ -65,9 +66,7 @@ if(notaFinal >= 7){
     console.log("Necesitas mejorar tu nota para poder aprobar el módulo");
 }
 
-
-
-
+*/
 
 
 

@@ -379,3 +379,122 @@ for (let i = 0; i < 5; i++){
 */
 
 //continue
+
+
+//Fechas
+
+/*
+//lo primero a establecer
+let parrafo = document.getElementById("fecha");
+
+
+document.getElementById("fecha").innerHTML = "Hola"
+
+parrafo.innerHTML = Date();
+
+
+
+//new Date(); 
+//new Date(milisegundos); 
+//new Date(fechaString); 
+//new Date(año, mes, día, horas, minutos, segundos, milisegundos);
+
+let fecha = new Date(92500000);
+parrafo.innerHTML = fecha;
+
+let fecha2 = new Date("2005-10-23");
+parrafo.innerHTML = fecha2;
+
+//los meses empiezan por el cero
+let fecha3 = new Date(2010, 0, 10, 22, 45, 8, 99);
+parrafo.innerHTML = fecha3;
+
+//métodos tipo fecha
+
+let fecha4 = new Date("2010-2-3");
+parrafo.innerHTML = fecha4.getDate();
+parrafo.innerHTML = fecha4.getDay();
+parrafo.innerHTML = fecha4.getFullYear();
+parrafo.innerHTML = fecha4.getHours();
+parrafo.innerHTML = fecha4.getMilliseconds();
+parrafo.innerHTML = fecha4.getMinutes();
+parrafo.innerHTML = fecha4.getMonth;
+parrafo.innerHTML = fecha4.getSeconds;
+parrafo.innerHTML = fecha4.getTime();
+*/
+
+//Arrays
+
+//Definir Arrays
+
+let vacio = []; //Array sin elementos
+console.log(vacio);
+console.log(vacio.length);
+
+let primos = [200, 1017, 300]; //Array con tres elementos numéricos elementos
+
+let miscelania = [16.29, true, "Carti needs to drop", ]; //Array con varios tipos de elementos y una coma sola
+console.log(miscelania);
+
+//Los valores de los elementos no tienen porqué ser constantes
+
+let n = 1017;
+let tabla = [n, n + 1, n + 2, n+ 3];
+console.log(tabla);
+
+let contador = [16, 18, , , ]; 
+console.log(contador.length); //La coma del final no se cuenta
+
+//Operador SPREAD
+
+let a = [1, 2, 73];
+let b = [0, ...a, 4];
+console.log(b);
+console.log(b.length);
+
+let original = [1, 2, 3];
+let copia = [...original];
+let copia2 = [...original, ...original];
+console.log(original);
+console.log(copia);
+console.log(copia2);
+
+console.log(copia2[0]);//acceder a elementos específicos de una Array
+original[0] = 9;//No la cambia. Si la pusiese antes de console.log(copia2) sí
+
+let digitos = ["0123456789"];
+let digitos2 = [..."0123456789"]
+console.log(digitos);
+console.log(digitos2);
+
+//Constructor de Arrays
+
+let c = new Array();
+let d = new Array(8);
+let e = new Array(16.29, "Is Lil Uzi Vert", "Love is like a BBL", true, "Carti only drops BANGERZ");
+console.log(c.length);
+console.log(d.length);
+console.log(e);
+
+//La diferencia entre los Arrays f y g es que f posee 23 sitios (slots) vacíos para 23 elementos diferentes; y g tiene un espacio para un solo elemento con una longitud de 23 caracteres
+let f = new Array(23); 
+let g = Array.of(23);
+console.log(f);
+console.log(g);
+
+let h = new Array(8);
+let i = new Array(9);
+let j = new Array(11);
+h[4] = 7;
+i[5] = 245;
+i[8] = "I wanna make you (singing like R&B Duke Dennis)"
+console.log(h);
+console.log(i[4 + 1]);
+console.log(i[8]);
+
+//PUSH
+
+j.push(5, "Is GUCCIII", "Blond; a blond bitch");
+console.log(j[j.length - 2]);
+
+//j.push(true); == j[j.lenght] = true;
