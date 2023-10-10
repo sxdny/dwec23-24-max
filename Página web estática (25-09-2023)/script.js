@@ -427,6 +427,7 @@ parrafo.innerHTML = fecha4.getTime();
 
 //Definir Arrays
 
+/*
 let vacio = []; //Array sin elementos
 console.log(vacio);
 console.log(vacio.length);
@@ -497,4 +498,100 @@ console.log(i[8]);
 j.push(5, "Is GUCCIII", "Blond; a blond bitch");
 console.log(j[j.length - 2]);
 
+*/
+
 //j.push(true); == j[j.lenght] = true;
+/*
+let a = [1, 2, 3];
+delete a [2];
+console.log(a);
+
+let i = 0;
+if (a[i]){
+    console.log(a[i]);
+}else {
+    console.log("Slot empty! (0O0)");
+}
+
+let j = 2;
+if (a[j]){
+    console.log(a[i]);
+}else {
+    console.log("Slot empty! (0O0)");
+}
+
+let letras = [..."I signed for a couple million"];
+console.log(letras);
+let aux = "";
+for(let letra of letras){
+    aux += letra;
+}
+console.log(aux);
+
+aux = "";
+let suma = 0;
+for(let [index, letra] of letras.entries()){
+    //suma += index;
+    //aux += letra;
+    if(index % 2 == 0) aux += letra;
+}
+console.log(aux);
+*/
+/*
+let letras = [..."I signed for a couple million"];
+let aux = "";
+for(let letra of letras){
+    aux += letra;
+}
+let mayusculas = "";
+letras.forEach(letra => { //=> (flecha)
+    mayusculas += letra.toUpperCase();
+});
+console.log(mayusculas);
+
+let index = 0;
+letras.forEach(letra => { //=> (flecha)
+    //mayusculas += letra.toUpperCase();
+    if(index % 2 == 0) {
+        mayusculas += letra.toUpperCase();
+    }else{
+        mayusculas = letras
+    }
+    index ++;
+});
+console.log(mayusculas);
+
+let letra = "";
+let vocales = "";
+for(let i = 0; i < letras.length; i++){
+    letra = letras[i];
+    if(/[aeiou]/.test(letra)){
+        vocales += letra;
+    }
+}
+console.log(vocales);
+*/
+
+//Arrays multidimensionales
+
+let tabla = new Array(10);
+
+for(let i = 0; i < tabla.length; i++){
+    //tabla[i] = i * 2;
+    tabla[i] = new Array(5); //Cada fila va a tener 5 columnas
+}
+
+for(let fila = 0; fila < tabla.length; fila++){
+    for(let col = 0; col < tabla[fila].length; col++){  //tabla[fila] -> nuestro primer slot en la array
+
+    }
+}
+console.log(tabla);
+//Lo mismo de dos formas distintas. Tanto arriba como abajo
+for(let fila = 0; fila < tabla.length; fila++){
+    let miArrayInterior = tabla[fila];
+    for(let col = 0; col < miArrayInterior.length; col++){  //tabla[fila] -> nuestro primer slot en la array
+        miArrayInterior[col] = fila * col;
+    }
+}
+console.log(tabla);
