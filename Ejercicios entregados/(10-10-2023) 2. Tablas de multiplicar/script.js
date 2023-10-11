@@ -13,7 +13,7 @@ for(let fila = 0; fila < tablasMultiplicar.length; fila++){
     for(let col = 0; col < miArrayInterior.length; col++){
         miArrayInterior[col] = fila * col;
         if(miArrayInterior[col] % 2 == 0){
-            console.log(miArrayInterior[col]);
+            console.log(fila + "*" + col + " = " + miArrayInterior[col]);
         }
     }
 }
