@@ -574,6 +574,7 @@ console.log(vocales);
 
 //Arrays multidimensionales
 
+/*
 let tabla = new Array(10);
 
 for(let i = 0; i < tabla.length; i++){
@@ -595,3 +596,148 @@ for(let fila = 0; fila < tabla.length; fila++){
     }
 }
 console.log(tabla);
+*/
+
+//Métodos de arrays
+
+//push --> (explicado más arriba)
+
+//pop() --> Elimina el último elemento del array y LO DEVUELVE
+
+/*
+let paco = ["Sidney", "Carti", "Sergi"];
+console.log(paco);
+let elemenotEliminado = paco.pop();
+console.log(elemenotEliminado);
+*/
+
+//shift() --> elimina el primer elemento y LO DEVUELVE  
+
+/*
+let paco = ["Sidney", "Carti", "Sergi"];
+let elemenotEliminado = paco.shift();
+console.log(elemenotEliminado);
+*/
+
+//unshift() --> agregs uno o más elementos AL PRINCIPIO
+
+/*
+let paco = ["Sidney", "Carti", "Sergi"];
+paco.unshift("Adrián", "Erik");
+console.log("My darlings: " + paco);
+*/
+
+//concat() --> combina dos o más arrays y devuelve un nuevo array
+
+/*
+let paco = ["Sidney", "Carti", "Sergi"];
+let otros = ["Adrián", "Erik"]
+let combinacion = paco.concat(otros);
+let combinacion2 = otros.concat(paco);
+console.log(combinacion);
+console.log(combinacion2);
+*/
+
+//slice() --> devuelve una copia que se suele llamar "Superficial" de una porción de la raíz
+
+/*
+let copiaPaco = paco.slice(0);
+let copiaPaco2 = paco.slice(1);
+let copiaPaco3 = paco.slice(2);
+console.log(copiaPaco);
+console.log(copiaPaco2);
+console.log(copiaPaco3);
+*/
+
+//splice() --> cambia el contenido de una array eloiminando, reemplazando o agrefando elementos
+
+/*
+let paco = ["Sidney", "Carti", "Sergi"];
+let otros = ["Adrián", "Erik"]
+paco.splice(2, 1, "Adrián", "Erik", ...otros, "Jose")
+console.log(paco);
+*/
+
+//indexOf() --> devuelve el primer índice en el que se encuentra un elemento dado. Devuelve -1 si no lo encuentra
+
+/*
+let paco = ["Sidney", "Carti", "Sergi"];
+let otro = ["Adrián", "Erik"];
+let cadena = "I'm counting money for fun";
+let indice = paco.indexOf("Carti");
+indice = cadena.indexOf("o");
+indice = cadena.lastIndexOf("u")
+indice = paco.lastIndexOf("Sidney");
+console.log(indice);
+*/
+
+//join() --> une todos los elementos de un array en una cadena (utilizando un separador)
+
+/*
+let paco = ["Sidney", "Carti", "Sergi"];
+let otro = ["Adrián", "Erik"];
+let cadena = paco.join(" , who is connected with ")
+console.log(cadena);
+*/
+
+//sort() --> ordena los elementos de una array alfabéticamente si son cadenas y numéricamenente si son números
+
+/*
+let paco = ["Sidney", "Carti", "Sergi"];
+let otro = [1,2,3,4,,15,20,40];
+
+console.log(paco.sort());
+console.log(otro.sort());
+*/
+/*
+let paco = ["Jose", "Alberto", "Rodrigo", "Gómez", "Escobar", "Guzmán"];
+console.log(paco.sort());
+*/
+
+//Ordenar correctamente con sort(): uso de parámetro. 
+//Se trata de una función: 
+// -Debe recibir dos valores a comparar. 
+//Como resultado debe: 
+// -devolver un valor positivo (1) si el primer valor es superior al segundo 
+// -devolder un valor negativo (-1) si el primer valor es inferior al segundo
+// -devolver un valor cero (0) si los dos valores son iguales o equivalentes para la ordenación 
+
+//sort() en números
+
+/*
+let numeros = [10, 5, 8, 3, 1];
+console.log(numeros.sort(function(a, b) {
+    return a - b;
+}));
+*/
+
+//con función flecha
+
+/*
+let numeros = [10, 5, 8, 3, 1];
+console.log(numeros.sort((a, b)=>{
+    return b - a;
+}));
+
+let numeros2 = [10, 5, 8, 3, 1];
+console.log(numeros.sort((a, b)=> b - a));
+*/
+
+//sort() en cadenas
+
+let paco = ["Jose", "Alberto", "Rodrigo", "Gómez", "Escobar", "Guzmán", "Ángel"];
+
+//Al "comparar" cadenas de caracteres, nos devuelve true o false. Esto significa que no las compara; por lo que deberemos utilizar operadores ternarios para poder nosotros establecer los resultados de la comparación (1, -1 y 0) pudiendo comparar
+
+console.log(paco.sort((a, b) => {
+    return a.toLowerCase() > b.toLowerCase();  //Siempre comparar cadenas con el toLowerCase(). A no ser que sean importantes los caracteres del string; como puede ocurrir con una contraseña.
+}));//No devuelve nada al no comparar porque nos dan resultados true o false
+
+console.log(paco.sort((a, b) => {
+    return (a.toLowerCase() > b.toLowerCase()) ? 1 : (a.toLowerCase() < b.toLowerCase()) ? -1 : 0;  //Siempre comparar cadenas con el toLowerCase(). A no ser que sean importantes los caracteres del string; como puede ocurrir con una contraseña.
+}));//Utiliza los valores de comparación (1, -1 y 0), pero no compara caracteres como los acentos.
+
+//Esta es la definitiva. Al también comparar caracteres como los acentos.
+console.log(paco.sort((a, b) => {
+    return (a.localeCompare(b);  //Siempre comparar cadenas con el toLowerCase(). A no ser que sean importantes los caracteres del string; como puede ocurrir con una contraseña.
+}));
