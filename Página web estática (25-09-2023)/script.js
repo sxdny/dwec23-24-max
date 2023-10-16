@@ -725,6 +725,7 @@ console.log(numeros.sort((a, b)=> b - a));
 
 //sort() en cadenas
 
+/*
 let paco = ["Jose", "Alberto", "Rodrigo", "Gómez", "Escobar", "Guzmán", "Ángel"];
 
 //Al "comparar" cadenas de caracteres, nos devuelve true o false. Esto significa que no las compara; por lo que deberemos utilizar operadores ternarios para poder nosotros establecer los resultados de la comparación (1, -1 y 0) pudiendo comparar
@@ -741,3 +742,170 @@ console.log(paco.sort((a, b) => {
 console.log(paco.sort((a, b) => {
     return (a.localeCompare(b);  //Siempre comparar cadenas con el toLowerCase(). A no ser que sean importantes los caracteres del string; como puede ocurrir con una contraseña.
 }));
+
+*/
+
+
+//Funciones
+
+/*
+function diHola() {
+    console.log("hola");
+}
+
+diHola();
+*/
+/*
+function multiplica(c, d){ //function multiplica (parámetro)
+    let a = 10;
+    let b = 20;
+
+    console.log(a * b * c * d);
+}
+
+multiplica(3, 10); //Valor de los parámetros establecidos
+*/
+/*
+function multiplica(c, d){ //PARÁMETRO (c)
+    let a = 10;
+    let b = 20;
+
+    return (a * b * c * d);
+}
+
+console.log(multiplica(3, 10) + 1);
+*/
+/*
+function multiplica(c, d){ //PARÁMETRO (c)
+    let a = 10;
+    let b = 20;
+
+    return (a * b * c * d);
+}
+
+let resultado = multiplica(3, 10) + 1;
+
+console.log(resultado);
+*/
+
+//Objetos. Se busca almazenar un conjunto de valores relazionados. Dentro de un objeto pueden haber propiedades (Pares clave valor) y métodos (funciones). Las claves de las propiedades de un objeto pueden ser cadenas de textos o identificadores válidos de JavaScript. Para las claves, podemos omitir las comillas salvo cuando necesitemos utilizar caracteres que no sean ASCCI, caraceres especiales, ...
+
+/*
+let unCliente = {
+    nombre: "Samyere", 
+    apellido: "Uzini",
+    "direccion fiscal": "c/ Big time 1629th",
+    "-+-+-+": "babytron inside me",
+    pago: {
+        tipo: "American Express",
+        tarjeta:"8003",
+        "fecha de caducidad": "09/92"
+    },
+    vencimiento: 30
+}
+
+unCliente["vencimiento"] = 60;
+console.log(unCliente);
+console.log(unCliente["nombre"]);
+console.log(unCliente["-+-+-+"]);
+console.log(unCliente["pago"]["tipo"]);
+console.log(unCliente.apellido);
+console.log(unCliente.pago.tarjeta);
+console.log(unCliente.pago["fecha de caducidad"]);
+*/
+
+//Un objeto puede estar compuesto pot números, cadenas, booleanos, arrays, otros objetos y funciones.
+
+//Métodos como elementos
+
+/*
+let estudiante = {
+    id: 2,
+    nombre: "Aubrey",
+    diHola: function diHola(){
+        return "Hola";
+    },
+    notas: [10, 9, 8]
+}
+
+console.log(estudiante.diHola());
+console.log(estudiante.notas);
+console.log(estudiante.notas[2]);
+*/
+/*
+let estudiante = {
+    id: 2,
+    nombre: "Aubrey",
+    diHola: function diHola(){
+        return "Hola";
+    },
+    notas: [10, 9, 8]
+}
+
+estudiante.apellido = "Drake Jackson";
+console.log(estudiante.apellido);
+
+estudiante.diAdios = function(){
+    return "Goodbye";
+}
+console.log(estudiante.diAdios());
+*/
+
+//this
+
+/*
+let factura = {
+    descripcion: "Factura de prueba",
+    precio: 100.0,
+    iva: 21.0,
+    subTotal: function(){
+        return this.precio;
+    },
+    total: function(){
+        return (this.precio + factura.iva);
+    }
+}
+
+console.log(factura);
+console.log(factura.precio);
+console.log(factura.total());
+*/
+
+//Constructores
+
+function Web(){
+    this.url = "https://localhost";
+    this.nombre = "LocalHost";
+
+    this.muestraInformacion = function(){
+        return "url: " + this.url + "\n" + "Web: " + this.nombre; //\n --> nos permite que el siguiente resultado salga en otra línea
+    }
+}
+
+Web.prototype.visitas = 2;
+Web.prototype.miFuncion = function(){
+    return "Hola";
+}
+let laWeb = new Web();
+let unaWeb = new Web();
+unaWeb.url = "https://www.fcbarcelona.cat";
+unaWeb.nombre = "Més que un club";
+let dosWeb = new Web();
+dosWeb.url = "https://www.liluziofficial.com/"
+dosWeb.nombre = "Lil Uzi, Lil Uzi, Lil Uzi"
+
+
+console.log(laWeb);
+console.log(unaWeb);
+console.log(unaWeb.muestraInformacion());
+console.log(dosWeb);
+console.log(dosWeb.muestraInformacion());
+console.log(unaWeb.visitas);
+
+
+
+
+
+
+
+
