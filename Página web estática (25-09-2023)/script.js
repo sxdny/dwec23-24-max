@@ -872,7 +872,7 @@ console.log(factura.total());
 */
 
 //Constructores
-
+/*
 function Web(){
     this.url = "https://localhost";
     this.nombre = "LocalHost";
@@ -901,6 +901,8 @@ console.log(unaWeb.muestraInformacion());
 console.log(dosWeb);
 console.log(dosWeb.muestraInformacion());
 console.log(unaWeb.visitas);
+*/
+
 
 
 
