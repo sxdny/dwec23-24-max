@@ -788,7 +788,7 @@ let resultado = multiplica(3, 10) + 1;
 console.log(resultado);
 */
 
-//Objetos. Se busca almazenar un conjunto de valores relazionados. Dentro de un objeto pueden haber propiedades (Pares clave valor) y métodos (funciones). Las claves de las propiedades de un objeto pueden ser cadenas de textos o identificadores válidos de JavaScript. Para las claves, podemos omitir las comillas salvo cuando necesitemos utilizar caracteres que no sean ASCCI, caraceres especiales, ...
+//Objetos. Se busca almazenar un conjunto de valores relac  ionados. Dentro de un objeto pueden haber propiedades (Pares clave valor) y métodos (funciones). Las claves de las propiedades de un objeto pueden ser cadenas de textos o identificadores válidos de JavaScript. Para las claves, podemos omitir las comillas salvo cuando necesitemos utilizar caracteres que no sean ASCCI, caraceres especiales, ...
 
 /*
 let unCliente = {
