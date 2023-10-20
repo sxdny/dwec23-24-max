@@ -903,11 +903,281 @@ console.log(dosWeb.muestraInformacion());
 console.log(unaWeb.visitas);
 */
 
+//Ordenar objetos de un array
+
+/*
+const ciudades = [
+    
+    {                             //Los objetos anónimos no tienen ningún nombre asignado y se escriben con {}
+        municipio: "Zaragoza",      
+        provincia: "Zaragoza",
+    },
+                                    NO ME FUNCIONA
+    {
+        muicipio: "Ávila",
+        provinvia: "Ávila",
+    },
+
+    {
+        municipio: "Madrid",
+        provincia: "Madrid",
+    },
+
+    {
+        municipio: "Barcelona",
+        provincia: "Barcelona",
+    },
+];
+
+console.log(ciudades);
+
+ciudades.sort((a, b) => {
+    return a.municipio.localeCompare(b.muicipio);
+});
+
+console.log(ciudades);
+*/
+
+//ES6
+
+/*
+const miArray = ["A", "b", "C"];
+
+miArray.push("d");
+
+console.log(miArray);
+
+miArray[0] = "B";
+
+console.log(miArray);
+*/
 
 
+//Desestructuración
 
+/*
+const numeros = [2, 3, 16];
 
+const [a, b, c] = numeros;
 
+console.log(a);
+console.log(b);
+console.log(c + a);
+*/
 
+//Destructurar objeto
 
+/*
+const persona = {
+    nombre: "Lil Uzi Vert",
+    edad: 28,
+}
 
+const {nombre, edad} = persona;
+
+console.log(nombre);
+*/
+
+/*
+const nombre = "Lil Uzi Vert";
+const edad = 28;
+
+const persona = {
+    nombre,
+    edad,
+}
+
+console.log(persona);
+console.log(persona.nombre);
+*/
+
+//Template Strings - Plantillas de cadenas
+//Meidante el operador de interpolación ${}
+
+/*
+const nombre = "Gucci Mane";
+const edad = 43;
+
+const mensaje = `Hi b****, my name is ${nombre} and I got ${edad} years`;
+
+console.log(mensaje);
+*/
+
+//Operador srpread
+
+/*
+const numeros = [1, 2, 3];
+const newNumbers = [numeros, 4, 5];
+const nuevosNumeros = [...numeros, 4, 5];
+
+console.log(newNumbers);
+console.log(nuevosNumeros);
+*/
+
+//Parámetros por defecto
+
+/*
+function saludar(nombre = "Invitado"){
+    console.log(`Hi, ${nombre}`);
+}
+
+saludar();
+*/
+
+//Parámetros rest (rest parameter)
+
+/*
+function sumar(...numeros){
+    let resultado = 0;
+    for(let numero of numeros){
+        resultado += numero;
+    }
+    return resultado;
+}
+
+console.log(sumar(5, 4, 3, 2, 1));
+*/
+
+//Funciones Flecha () => {}
+
+/*
+function sumar(a, b){
+
+}
+*/
+
+            //misma función de arriba con flechas
+
+/*
+const sumar = (a, b) => {
+    return a + b;
+}
+
+                            NO ME FUNCIONÓ
+console.log(sumar(3, 5));
+
+const sumar1 = (c, d) => c + d;
+
+console.log(sumar1(0, 1629));
+
+const sumar2 = (...numeros) => {
+    return e + f;
+}
+
+console.log(sumar2(1, 3));
+*/
+
+//Métodos de Arrays
+//forEach(): ejecuta una función (nuestra) una vez por cada elemento del array
+
+/*
+const numeros = [1, 2, 3, 4, 5];
+
+numeros.forEach((numero) => {
+    console.log(numero);
+})
+
+const multiplica = (n) => {
+    return n * 2;
+}
+
+numeros.forEach((numero) => {
+    console.log(multiplica(numero));
+});
+
+console.log(numeros);
+*/
+
+//map(): crea un nuevo array con los resultados de aplicar una función a cada elemento de la raíz
+
+/*
+const numeros = [1, 2, 3, 4];
+
+const dobleNumero = numeros.map((numero) => {
+    return numero * 2;
+})
+
+console.log(dobleNumero);
+*/
+
+//filter(): crea un nuevo array con todos los elementos que cumplan una condicion determinada
+
+/*
+const numeros = [1, 2, 3, 4];
+
+const numerosPares = numeros.filter((numero) => {
+    //return numero % 2 == 0;
+    return numero ? numero > 2 : numero < 2 ---CREAR BOOLEANO---
+});
+
+console.log(numerosPares);
+*/
+
+//reduce(): aplica una función a un acumulador y a cada elemento del array (de izquierda a derecha) para reducir a un único valor.
+
+/*
+const numeros = [1, 2, 3, 4];
+
+const suma = numeros.reduce((acumulador, numero) => {
+    return acumulador + numero;
+}, 0);
+
+console.log(suma);
+*/
+
+//Find(): devuelve el primer elemento del array que cumpla una determinada condición
+
+/*
+const numeros = [1, 2, 3, 4];
+
+const numeroEncontrado = numeros.find((numero) => {
+    return numero < 3;
+});
+
+console.log(numeroEncontrado);
+*/
+
+//findIndex(): devuelve el índice del primer elemento de la array que cumple con una función de prueba  o devolverá -1 si no encuentra nada.
+
+/*
+const numeros = [1, 2, 3, 4];
+
+const indiceEncontrado = numeros.findIndex((numero) => {
+    return numero < 3;
+});
+
+console.log(indiceEncontrado);
+*/
+
+//some(): comprueba si almenos un elemento de la array cumple una condición determinada
+
+/*
+const numeros = [1, 2, 3, 4];
+
+const tieneNumeroPar = numeros.some((numero) => {
+    return numero % 2 == 0;
+});
+
+console.log(tieneNumeroPar);
+*/
+/*
+if(tieneNumeroPar = numeros.some((numero) => {
+    return numero % 2 == 0;
+})){
+    console.log("Uziii not again");
+} else {
+    console.log("Babytron got me drunk");
+}
+*/
+
+//every(): comprueba si todos los elementos cumplen una condición determinada
+
+/*
+const numeros = [1, 2, 3, 4];
+
+const todosNumerosPares = numeros.every((numero) => {
+    return numero % 2 == 0;
+});
+
+console.log(todosNumerosPares);
+*/
