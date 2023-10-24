@@ -67,3 +67,19 @@ if(notaFinal >= 7){
 }
 
 */
+
+
+// Create a new Date object
+let currentDate = new Date();
+
+// Extract day, month, and year
+let day = currentDate.getDate();
+let month = currentDate.getMonth() + 1; // Adding 1 because getMonth() returns 0-based index
+let year = currentDate.getFullYear();
+
+// Display day, month, and year in the console
+console.log("Day: " + day);
+console.log("Month: " + month);
+console.log("Year: " + year);
+
+

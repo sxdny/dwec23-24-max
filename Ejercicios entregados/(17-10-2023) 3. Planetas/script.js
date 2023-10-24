@@ -1,16 +1,3 @@
-/*
-
-Información de los planetas:
-
-1. Marte:
-2. Júpiter:
-3. Saturno:
-4. Venus:
-5. Neptuno:
-
-*/
-
-
 // Almacenamiento de los datos de los planetas en arrays
 
 let infoPlanetas = [
@@ -20,7 +7,6 @@ let infoPlanetas = [
     ["Venus", 107930000, 928000000000/1083210000000, "conocido desde la antigüedad"],
     ["Neptuno", 4472700000, 62540000000000/1083210000000, "descubierto el " + new Date("1846-09-23")]
 ];
-
 
 
 // Constructor Planeta
@@ -36,7 +22,6 @@ function Planeta(nombre, distanciaSol, tamanoRelativo, fechaDescubrimiento) {
         return this.nombre + ":" + "\n" + " · Distancia con el Sol: " + this.distanciaSol + " km." + "\n" + " · Tamaño relativo a la Tierra: " + this.tamanoRelativo + " veces la tierra." + "\n" +  " · Fecha de descubrimiento: " + fechaReal + "." + "\n" + " ";
     };
 }
-
 
 
 // Objetos planeta a partir de un bucle

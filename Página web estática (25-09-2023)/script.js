@@ -388,7 +388,7 @@ for (let i = 0; i < 5; i++){
 let parrafo = document.getElementById("fecha");
 
 
-document.getElementById("fecha").innerHTML = "Hola"
+document.getElementById("fecha").innerHTML = "Hola";
 
 parrafo.innerHTML = Date();
 
@@ -1180,4 +1180,124 @@ const todosNumerosPares = numeros.every((numero) => {
 });
 
 console.log(todosNumerosPares);
+*/
+
+
+//Clases - class (crear clase)
+//ES6. Programación orientada a objetos en javascript.
+
+/*
+class Persona{
+    constructor(nombre) {       //constructor
+        this.nombre = nombre;
+    }
+
+    saludar(){   //método
+        console.log(`Hola, soy ${this.nombre}`);   //acentos abiertos porque sino no funciona
+    }
+}
+*/
+
+//const uzi = new Persona ("Lil Uzi Vert");
+
+//uzi.saludar();
+
+
+//Herencia
+
+/*
+class Empleado extends Persona{
+    constructor (nombre, salario){
+        super(nombre);
+        this.salario = salario;
+    }
+    trabajar(){
+        console.log(`${this.nombre} está ganando millone.`);
+    }
+
+}
+
+const josue = new Empleado("Josué", 10000000);
+
+josue.saludar();
+josue.trabajar();
+*/
+
+//Símbolos
+//Los símbolos son una nueva clase de datos introducida por ES6. 
+//1. Son valores únicos e inmutables.
+//2. Se pueden utilizar como identificadores de propiedades de objetos
+
+/*
+const id = Symbol ("id");
+
+const persona = {
+    nombre: "Jeniffer",
+    [id]: 1,
+};
+console.log(persona.nombre + " cuyo id es " + persona[id]);
+*/
+
+//Iteradores
+
+//Son objetos que implementan el protocolo de iteración en JavaScript. Permiten recorrer y acceder a los elementos de una colección uno a uno.
+
+/*
+const numeros = [1, 2, 3];
+
+const iterador = numeros[Symbol.iterator]();
+
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+*/
+
+//SET
+//Permite almacenar valores únicos de cualquier tipo.
+//No permite duplicados y ofrece métodos para agregar, eliminar y verificar la existencia de elementos.
+
+/*
+const setNumeros = new Set();
+
+setNumeros.add(1);
+setNumeros.add(2);
+setNumeros.add(3);
+
+console.log(setNumeros.has(2));
+
+setNumeros.delete(2);
+console.log(setNumeros.has(2));
+
+console.log(setNumeros.size);
+
+console.log(setNumeros);
+
+const iteradorNumeros = setNumeros[Symbol.iterator]();
+
+console.log(iteradorNumeros.next());
+console.log(iteradorNumeros.next());
+console.log(iteradorNumeros.next());
+*/
+
+//MAP
+//Permite almacenar pares clave-valor, donde cada clave es única.
+//Permite operaciones de búsqueda, inserción y eliminación
+
+/*
+const mapaNombres = new Map();
+
+mapaNombres.set("nombre", "Jeffrey")
+mapaNombres.set("edad", 33);
+mapaNombres.set("profesion", "Emperador");
+
+console.log(mapaNombres.get("nombre"));
+console.log(mapaNombres.get("edad"));
+console.log(mapaNombres.get("profesion"));
+
+console.log(mapaNombres.has("edad"));
+
+console.log(mapaNombres.size);
+
+console.log(mapaNombres);
 */
