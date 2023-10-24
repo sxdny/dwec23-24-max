@@ -384,7 +384,7 @@ for (let i = 0; i < 5; i++){
 //Fechas
 
 /*
-//lo primero a establecer
+//lo primero a establecer. "fecha" es el id que establecemos en el html
 let parrafo = document.getElementById("fecha");
 
 
@@ -1301,3 +1301,57 @@ console.log(mapaNombres.size);
 
 console.log(mapaNombres);
 */
+
+
+//Manejo del tiempo
+
+//setInterval() y setTimeOut()
+//setTimeOut(funcionALllamar, milisegundos)
+//Ejecuta a la funciónALlamar transcurrido el tiempo indicado en el segundo parámetro
+
+//setInterval(funcionALlamar, milisegundos)
+//Ejecuta a la funcionALlamar de manera periódica transcurrido el tiempo indicado en el segundo parámetro
+
+//clearInterval()
+//Detiene la ejecucuión indicada con setInterval()
+
+//clearTimeOut()
+//Detiene la ejecución indicada con setTimeOut()
+
+
+
+let elCrono;
+
+function crono(){
+    let miFecha = new Date();
+    let hora = miFecha.getHours();
+    let minutos = miFecha.getMinutes();
+    let segundos = miFecha.getSeconds();
+    let ampm = "pm";
+
+    if (hora > 12){
+        ampm = "pm";
+    } else {
+        ampm ="am";
+    }
+
+    if (hora < 10){
+        hora = "0" + hora;
+    }
+    if (hora < 10){
+        minutos = "0" + minutos;
+    }
+    if (hora < 10){
+        segundos = "0" + segundos;
+    }
+
+    let lahora = document.getElementById ("laHora");
+
+    lahora.innerHTML = hora + ":" + minutos + ":" + segundos;
+    
+}
+
+
+Window.onLoad = function (){
+    let elCrono = setInterval (crono, 1000);
+}

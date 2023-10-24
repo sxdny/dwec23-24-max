@@ -69,17 +69,121 @@ if(notaFinal >= 7){
 */
 
 
-// Create a new Date object
-let currentDate = new Date();
+// // Create a new Date object
+// let currentDate = new Date();
 
-// Extract day, month, and year
-let day = currentDate.getDate();
-let month = currentDate.getMonth() + 1; // Adding 1 because getMonth() returns 0-based index
-let year = currentDate.getFullYear();
+// // Extract day, month, and year
+// let day = currentDate.getDate();
+// let month = currentDate.getMonth() + 1; // Adding 1 because getMonth() returns 0-based index
+// let year = currentDate.getFullYear();
 
-// Display day, month, and year in the console
-console.log("Day: " + day);
-console.log("Month: " + month);
-console.log("Year: " + year);
+// // Display day, month, and year in the console
+// console.log("Day: " + day);
+// console.log("Month: " + month);
+// console.log("Year: " + year);
+
+//CRONÓMETRO
+
+/*
+let elCrono;
+
+function crono(){
+    let hora = "0";
+    let minutos = "0";
+    let segundos = "0";
+
+    if (hora < 10){
+        hora = "0" + hora;
+    }
+    if (minutos < 10){
+        minutos = "0" + minutos;
+    }
+    if (segundos < 10){
+        segundos = "0" + segundos;
+    }
+
+    segundos ++
+    if(segundos > 59){
+        segundos = "0";
+        minutos ++
+    }
+
+    if(minutos > 59){
+        minutos = "0";
+        hora ++
+    }
 
 
+}
+
+Window.onLoad = function (){
+    elCrono = setInterval (crono, 10000);
+}*/
+
+//------------------SOLUCIÓN DEL PROFESOR-------------------------
+
+let elCrono;
+
+let laHora = document.getElementById("laHora");
+
+//Inicialización del tiempo para el cronómetro
+let miFecha = new Date();
+miFecha.setHours(0, 0, 0, 0);
+
+//Inicialización del texto para "laHora" 
+laHora.innerHTML = "00:00:00";
+
+//
+function crono(){
+    let hora = miFecha.getHours();
+    let minutos = miFecha.getMinutes();
+    let segundos = miFecha.getSeconds();
+
+    segundos ++;
+    if(segundos > 59){
+        segundos = "0";
+       
+        minutos ++;
+       
+        miFecha.setMinutes(minutos);
+    }
+
+    miFecha.setSeconds(segundos);
+
+    if(hora < 10){
+        hora = "0" + hora;
+    }
+    if(minutos < 10){
+        minutos = "0" + minutos;
+    }
+    if(segundos < 10){
+        segundos = "0" + segundos;
+    }
+
+    laHora.innerHTML = hora + ":" + minutos + ":" + segundos;
+}
+
+//Función llamada por el botón "Restart"
+function reiniciarCrono(){
+    //Inicialización del tiempo para el cronómetro
+    let miFecha = new Date();
+    miFecha.setHours(0, 0, 0, 0);
+
+    //Inicialización del texto para "laHora" 
+    laHora.innerHTML = "00:00:00";
+}
+
+//Función llamada por el botón "Start"
+function start(){
+    elCrono = setInterval(crono, 1000);
+}
+
+//Función llamada por el botón "Stop"
+function stop(){
+    clearInterval(elCrono);
+}
+
+//Función llamada por el botón "restart"
+function restart(){
+    setTimeOut(reiniciarCrono, 1000);
+}
