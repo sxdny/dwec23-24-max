@@ -1305,8 +1305,8 @@ console.log(mapaNombres);
 
 //Manejo del tiempo
 
-//setInterval() y setTimeOut()
-//setTimeOut(funcionALllamar, milisegundos)
+//setInterval() y setTimeout()
+//setTimeout(funcionALllamar, milisegundos)
 //Ejecuta a la funciónALlamar transcurrido el tiempo indicado en el segundo parámetro
 
 //setInterval(funcionALlamar, milisegundos)
