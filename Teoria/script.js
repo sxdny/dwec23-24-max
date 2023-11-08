@@ -1319,7 +1319,7 @@ console.log(mapaNombres);
 //Detiene la ejecución indicada con setTimeOut()
 
 
-
+/*
 let elCrono;
 
 function crono(){
@@ -1355,3 +1355,7 @@ function crono(){
 Window.onLoad = function (){
     let elCrono = setInterval (crono, 1000);
 }
+*/
+
+
+//MUY SEPARADO. CADA CARPETA DE TEORÍA SERÁ UNA EXPLICACIÓN. NO SE JUNTARÁN FUNCIONES NI NADA

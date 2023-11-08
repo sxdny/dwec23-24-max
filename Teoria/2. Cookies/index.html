@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            font-size: 6rem;
+            font-weight: 100;
+            text-shadow: 0.5rem 1rem rgba(100, 72, 245, 0.3);
+            color:rgb(90, 255, 99);
+        }
+        button[class*=cookie]{
+            background-color: rgb(251, 255, 37);
+            margin-bottom: 5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="title"> Cookies </h1>
+
+    <!-- Botones Crear y Leer cookies (Código hasta la línea 38) -->
+    <button class="boton-crear-cookie" type="button" onclick="crearCookie('Oreo');"> Crear Cookie </button>
+
+    <button class="boton-leer-cookie" type="button" onclick="leerCookie();"> Leer Cookies </button>
+
+    <br>
+
+    <!-- Botones Crear y Leer cookies (Código desde la línea 38) -->
+    <button class="boton-guardar-cookie" type="button" onclick="guardarValores();"> Guardar Cookie </button>
+
+    <button class="boton-leer-cookie" type="button" onclick="leerValores();"> Leer Cookies </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
