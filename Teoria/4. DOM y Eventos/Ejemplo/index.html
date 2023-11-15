@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up</title>
+    <style>
+        button {
+            display: block;
+            margin: auto;
+            background-color: rgba(0, 255, 149, 0.5);
+            color: whitesmoke;
+            border: 0;
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+
+        .envoltorio-pop-up {
+
+            background-color: rgba(0, 0, 150, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+
+        .pop-up {
+
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            margin: 10% auto;
+            padding: 20px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+
+        .pop-up a {
+
+            background-color: aqua;
+            color: blue;
+            text-decoration: none;
+            padding: 6px 10px;
+        }
+
+        .cerrar-pop-up {
+
+            position: absolute;
+            top: 5px;
+            right: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="button"> Click me!!! </button>
+
+    <div class="envoltorio-pop-up" id="envoltorio-pop-up">
+
+        <div class="pop-up" id="pop-up">
+
+            <div class="contenido-pop-up" id="contenido-pop-up">
+
+                <h1> Click outside!!! </h1>
+                <h2> or over me </h2>
+                <p> A </p>
+                <a href="#"> Show </a>
+
+            </div>
+
+            <button class="cerrar-pop-up" id="cerrar-pop-up"> x </button>
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
